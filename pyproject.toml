@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "samplepoetry"
+version = "0.1.0"
+description = ""
+authors = ["Ren <jessjones.v15@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+tox = "^3.24.3"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+samplepoetry = 'samplepoetry.app:main'
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py27, py35, py36, py37, pypy, jython
+isolated_build = True
+
+[testenv]
+deps =
+    pytest
+commands =
+    pytest
+"""

@@ -1,0 +1,1 @@
+. /home/ren/.cache/pypoetry/virtualenvs/samplepoetry-r3h1urtz-py3.6/bin/activate
